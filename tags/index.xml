@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 标签 - 骆驼兔子</title>
+        <link>https://iluotuo.github.io/tags/</link>
+        <description>Tags - 标签 - 骆驼兔子</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 19 May 2024 10:47:51 &#43;0800</lastBuildDate><atom:link href="https://iluotuo.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>技术</title>
+    <link>https://iluotuo.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+    <pubDate>Sun, 19 May 2024 10:47:51 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>文章</title>
+    <link>https://iluotuo.github.io/tags/%E6%96%87%E7%AB%A0/</link>
+    <pubDate>Sun, 19 May 2024 10:47:51 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/tags/%E6%96%87%E7%AB%A0/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

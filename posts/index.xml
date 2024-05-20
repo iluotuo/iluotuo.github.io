@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - 骆驼兔子</title>
+        <link>https://iluotuo.github.io/posts/</link>
+        <description>所有文章 | 骆驼兔子</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 20 May 2024 07:55:47 &#43;0800</lastBuildDate><atom:link href="https://iluotuo.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>姚诺 - 作品集</title>
+    <link>https://iluotuo.github.io/posts/resume-works/</link>
+    <pubDate>Mon, 20 May 2024 07:55:47 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/posts/resume-works/</guid>
+    <description><![CDATA[查看简历 2011年毕业以来工作期间完成的项目。 节选部分 2016年04月 &ndash; 至今 杭州六亚方舟网络科技有限公司 ｜ 股东 ｜ 对接外包、研发、项目管理 群 缘]]></description>
+</item>
+<item>
+    <title>姚诺 - 个人简历</title>
+    <link>https://iluotuo.github.io/posts/resume/</link>
+    <pubDate>Sun, 19 May 2024 14:37:00 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/posts/resume/</guid>
+    <description><![CDATA[专注互联网领域十年以上 1 基本资料 姚 诺 ｜ 男 ｜ 1987-11-28 ｜ 江苏徐州 ｜ 现居住于杭州 浙江大学城市学院 - 计算机科学与技术 本科 浙江大学 - 软件工程 硕士 曾任职 .ne]]></description>
+</item>
+<item>
+    <title>终于有了自己的博客了</title>
+    <link>https://iluotuo.github.io/posts/hello/</link>
+    <pubDate>Sun, 19 May 2024 10:47:51 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/posts/hello/</guid>
+    <description><![CDATA[最近重拾H5，历时三天，终于部署成功！ 框架：Hugo 主题：LoveIt 过程：不说了，太折腾了。]]></description>
+</item>
+</channel>
+</rss>
