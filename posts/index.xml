@@ -3,7 +3,15 @@
         <title>所有文章 - 骆驼兔子</title>
         <link>https://iluotuo.github.io/posts/</link>
         <description>所有文章 | 骆驼兔子</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 22 May 2024 19:29:47 &#43;0800</lastBuildDate><atom:link href="https://iluotuo.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 23 May 2024 08:42:06 &#43;0800</lastBuildDate><atom:link href="https://iluotuo.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Runoob - C&#43;&#43;编程教程笔记</title>
+    <link>https://iluotuo.github.io/posts/2024-05-23_runoob/</link>
+    <pubDate>Thu, 23 May 2024 08:42:06 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/posts/2024-05-23_runoob/</guid>
+    <description><![CDATA[准备工作 Dev-C++（或者叫做 Dev-Cpp）是 Windows 环境下的一个轻量级 C/C++ 集成开发环境（IDE）。非常适合于C/C++语言初学者使用。 强烈建议]]></description>
+</item>
+<item>
     <title>新媒体运营笔记</title>
     <link>https://iluotuo.github.io/posts/2024-05-22_%E6%96%B0%E5%AA%92%E4%BD%93%E8%BF%90%E8%90%A5%E7%AC%94%E8%AE%B0/</link>
     <pubDate>Wed, 22 May 2024 19:29:47 &#43;0800</pubDate>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Runoob - C&#43;&#43;编程教程笔记 - 骆驼兔子</title><meta name="Description" content=""><meta property="og:url" content="https://iluotuo.github.io/posts/2024-05-23_runoob/">
+  <meta property="og:site_name" content="骆驼兔子">
+  <meta property="og:title" content="Runoob - C&#43;&#43;编程教程笔记">
+  <meta property="og:description" content="准备工作 Dev-C&#43;&#43;（或者叫做 Dev-Cpp）是 Windows 环境下的一个轻量级 C/C&#43;&#43; 集成开发环境（IDE）。非常适合于C/C&#43;&#43;语言初学者使用。 强烈建议">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-23T08:42:06+08:00">
+    <meta property="article:modified_time" content="2024-05-23T08:42:06+08:00">
+    <meta property="article:tag" content="C&#43;&#43;">
+    <meta property="article:tag" content="Dev C&#43;&#43;">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Runoob - C&#43;&#43;编程教程笔记">
+  <meta name="twitter:description" content="准备工作 Dev-C&#43;&#43;（或者叫做 Dev-Cpp）是 Windows 环境下的一个轻量级 C/C&#43;&#43; 集成开发环境（IDE）。非常适合于C/C&#43;&#43;语言初学者使用。 强烈建议">
+<meta name="application-name" content="骆驼兔子">
+<meta name="apple-mobile-web-app-title" content="骆驼兔子"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://iluotuo.github.io/posts/2024-05-23_runoob/" /><link rel="prev" href="https://iluotuo.github.io/posts/2024-05-22_%E6%96%B0%E5%AA%92%E4%BD%93%E8%BF%90%E8%90%A5%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Runoob - C++编程教程笔记",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/iluotuo.github.io\/posts\/2024-05-23_runoob\/"
+        },"genre": "posts","keywords": "C\u002b\u002b, Dev C\u002b\u002b","wordcount":  2932 ,
+        "url": "https:\/\/iluotuo.github.io\/posts\/2024-05-23_runoob\/","datePublished": "2024-05-23T08:42:06+08:00","dateModified": "2024-05-23T08:42:06+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "骆驼兔子"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="骆驼兔子"><span class="header-title-pre"><i class='fa-solid fa-hippo'></i></span> 主 页 </a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="无边记"> 所有博文 </a><a class="menu-item" href="/tags/"> 标 签 </a><a class="menu-item" href="/categories/"> 分 类 </a><a class="menu-item" href="/posts/resume" title="生命的痕迹"> 简 历 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="骆驼兔子"><span class="header-title-pre"><i class='fa-solid fa-hippo'></i></span> 主 页 </a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="无边记">所有博文</a><a class="menu-item" href="/tags/" title="">标 签</a><a class="menu-item" href="/categories/" title="">分 类</a><a class="menu-item" href="/posts/resume" title="生命的痕迹">简 历</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Runoob - C++编程教程笔记</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>骆驼兔子</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BC%96%E7%A8%8B/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>编程</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024/05/23">2024/05/23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2932 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#关于编程的那些事">关于编程的那些事</a>
+      <ul>
+        <li><a href="#编程就是写作">编程就是写作</a></li>
+        <li><a href="#语文不能是体育老师教的">语文不能是体育老师教的</a></li>
+      </ul>
+    </li>
+    <li><a href="#具体安排建议">具体安排建议</a></li>
+    <li><a href="#参考资料">参考资料</a>
+      <ul>
+        <li><a href="#开发工具的使用">开发工具的使用</a></li>
+        <li><a href="#程序设计基础">程序设计基础</a></li>
+        <li><a href="#算法与真题">算法与真题</a></li>
+      </ul>
+    </li>
+    <li><a href="#其他">其他</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="准备工作">准备工作</h2>
+<p>Dev-C++（或者叫做 Dev-Cpp）是 Windows 环境下的一个轻量级 C/C++ 集成开发环境（IDE）。非常适合于C/C++语言初学者使用。</p>
+<p>强烈建议在家里电脑上也安装此编程工具，方便以后复习、练习使用。具体步骤如下：</p>
+<div class="details admonition abstract">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>点击查看 - 搭建编程环境<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><h3 id="如何下载">如何下载</h3>
+<ol>
+<li>在自己的电脑上（台式、笔记本均可），登录官网下载址：<code>https://sourceforge.net/projects/orwelldevcpp/</code></li>
+<li>单击<code>Download</code>按钮，开始下载</li>
+<li>等待下载过程（很快，不到一分钟；如果网差的话也没事，慢慢等几分钟即可搞定）</li>
+<li>下载好后，找到安装包，名称叫<code>Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe</code>，即代表下载成功。</li>
+</ol>
+<h3 id="如何安装">如何安装</h3>
+<p>双击<code>Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe</code> 安装包，开始下载，你将看依次看到如下界面：</p>
+<ul>
+<li>
+<p>【第一步】<code>Please wait while Setup is loading...unpacking data: 10%</code>
+此时代表是解压状态，不要进行操作，等待即可。</p>
+</li>
+<li>
+<p>【第二步】<code>Installer Language</code> &mdash; <code>Please select a language</code>
+此时代表是选择语言，默认为<code>English</code>即可，不要进行修改，点击<code>OK</code>按钮，进入下一步</p>
+</li>
+<li>
+<p>【第三步】<code>Dev-C++ 5.11</code> &mdash; <code>License Agreement</code>
+此时代表相关协议，点击<code>I Agree</code>按钮，进入下一步</p>
+</li>
+<li>
+<p>【第四步】<code>Dev-C++ 5.11</code> &mdash; <code>Choose Components</code>
+此时代表组件的配置，不要进行其他操作，点击<code>Next &gt;</code>按钮，进入下一步</p>
+</li>
+<li>
+<p>【第五步】<code>Dev-C++ 5.11</code> &mdash; <code>Choose Install Location</code>
+此时代表选择安装位置，怕麻烦的话也可不要进行其他操作，点击<code>Install</code>按钮即可，进入下一步</p>
+</li>
+<li>
+<p>【第六步】<code>Dev-C++ 5.11</code> &mdash; <code>Installing</code>
+此时代表着正在安装&hellip;，不要进行其他操作，耐心等待即可</p>
+</li>
+<li>
+<p>【第七步】<code>Dev-C++ 5.11</code> &mdash; <code>Completing the Dev-C++ 5.11 Setup Wizard</code>
+此时代表着安装成功，不要进行其他操作，点击<code>Finish</code>按钮，进入下一步</p>
+</li>
+<li>
+<p>【第八步】<code>Dev-C++ 5.11 first time configuration</code> &mdash; <code>Select your language</code>
+此时代表初始配置语言，点击<code>简体中文/Chinese</code>后，再点击<code>&gt; Next</code>按钮，进入下一步</p>
+</li>
+<li>
+<p>【第九步】<code>Dev-C++ 5.11 first time configuration</code> &mdash; <code>选择你的主题</code>
+此时代表自定义主题，不用进行其他操作，点击 <code>&gt; Next</code>按钮，进入下一步</p>
+</li>
+<li>
+<p>最后，点击右下角 <code>OK</code>按钮，大功造成。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>安装或使用过程中，遇到问题，可直接联系我</strong></p>
+</blockquote>
+</div>
+        </div>
+    </div>
+<h2 id="关于编程的那些事">关于编程的那些事</h2>
+<p>我们都知道：生活中，笔是多种多样的，纸是有多种尺寸的，最通用的语言之一是英语。</p>
+<p>编程的入门阶段，老师给你们选择的是最适合的。</p>
+<p>学习之前心中有一个整体的把握，再学习其他编程，都是殊路同归。</p>
+<h3 id="编程就是写作">编程就是写作</h3>
+<p>我一直认为<code>编程就是写作</code>，是与机器商量出一本书的过程。</p>
+<ul>
+<li>用什么笔？ 答：<code>台式电脑</code>、笔记本、平板&hellip;</li>
+<li>用什么纸？ 答：<code>Dev-C++</code>、Xcode、Visul Studio&hellip;</li>
+<li>怎么表达？ 答：<code>C++语言</code>、Python、Java、PHP&hellip;.</li>
+</ul>
+<p>怎么用笔？</p>
+<ul>
+<li>手机玩的这么溜，相信电脑也不在话下</li>
+</ul>
+<p>怎么用纸？</p>
+<ul>
+<li>选择了<code>Dev-C++</code>工具，慢慢参考教程掌握，相信老师课堂上都教过</li>
+</ul>
+<p>怎么表达？</p>
+<ul>
+<li>根据老师的安排，以<code>RUNOOB</code>教程网站为主，其他作为巩固</li>
+</ul>
+<p>分享一些表达技巧，如下：</p>
+<h3 id="语文不能是体育老师教的">语文不能是体育老师教的</h3>
+<p>语文是基础学科，打从小就学。细细想一下，学的那些东西，不就是识字、背大量词语、掌握若干种语法吗？
+编程也一样：（以C++为例）</p>
+<ul>
+<li>
+<p>识字是编程的基础：<code>数据类型</code>、<code>关键字</code>、<code>变量常量</code>、<code>运算符</code>&hellip;</p>
+<p>千万别问为什么int表示整数、bool表示true/false之类的问题。
+我们是使用语言的人，不是创造者。问这些问题，就相当于问：汉字里的<code>我</code>的字形为什么是<strong>我</strong>，而不是长其他的模样。等自己超神一般杀戮的那一天，亲自创建一种编程语言，想怎么创造就怎么创造。</p>
+<p>学习过程中，我们要做的唯一一件事就是：记住，大量练习。</p>
+<blockquote>
+<p>如果非要刨根问底的话，编程语言里的好多关键字，都是英语的缩写
+如：<code>int</code> 是 单词 <code>integer</code>的缩写；<code>bool</code> 是 单词 <code>boolean</code>的缩写；
+另外，像<code>for</code>[从&hellip;] <code>class</code>[类] <code>struct</code>[结构] <code>while</code>[到&hellip;时] <code>type</code>[类别] <code>template</code>[模版] <code>include</code>[包含]，理解了单词的含义，会轻松很多。</p>
+</blockquote>
+<p>所以人家常说：英语好了，学得快。</p>
+</li>
+<li>
+<p>语法是算法的基础
+我沉浸算法七年有余，深知<code>数据结构</code>的重要性。要想学好算法，必须得熟悉以下知识点：</p>
+<ul>
+<li>循环结构：<code>for</code> <code>while</code>&hellip;</li>
+<li>条件判断：<code>if..else</code> <code>switch</code>&hellip;</li>
+<li>数组、引用、变量：
+这些知识点的概念必须要反复看，技巧的提升需要刷题练习。</li>
+</ul>
+</li>
+<li>
+<p>算法不是编程，是数学
+切记<code>算法重在思路，不在于编程语言</code>。</p>
+<ul>
+<li>
+<p>同样一种<code>排序算法</code>，可以用C++语言编写，也可以用JavaScript语言编写，甚至可以用汉字编写。算法的思路清晰了，语言只是一种表达方式，仅此而已。</p>
+</li>
+<li>
+<p>算法可以只用数组实现，也可以只用类来实现，也可以写一个函数实现&hellip;这就是所谓的编程风格。你熟悉哪一种，就用你擅长的。</p>
+</li>
+<li>
+<p>好的算法是无数前辈总结出来，流传至今。参加竞赛，必须要背诵各式各样的算法。算法相当于是内功心法，在不同的题目中表现的形式不一样，需要自己去灵活调整修改。</p>
+<ul>
+<li>
+<p>小学做数学应用题时，会绞尽脑汗想怎么用<code>算术</code>来解</p>
+</li>
+<li>
+<p>初中做数学应用题时，学了<code>多元方程式</code>，发现之前的都是浮云</p>
+<p>此时方程式就是算法的概念：x，y就是变量，列出的等式就是算法的一种表达方式。</p>
+</li>
+<li>
+<p>到了高中，特别是省赛（我看了几套真题），发现<code>通项公式</code>是算法的一种表达方式。</p>
+<p>正如：1 &mdash; 100的求和的通项公式你一定熟悉</p>
+<ul>
+<li>实现方式一：定义首项、公差、项数变量，直接写一个表达式即可</li>
+<li>实现方式二：直接写1+2+3+&hellip;来实现</li>
+<li>实现方式三：定义起始位置、循环次数、步长，利用for循环实现</li>
+</ul>
+</li>
+</ul>
+<p>孰好孰坏？显而易见。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="具体安排建议">具体安排建议</h2>
+<p>毕竟是参加省赛，不是玩编程。时间紧，任务重，必须要针对性的学习。
+查阅了下资料，结合自己的看法，建议如下：</p>
+<ol>
+<li><code>以老师的教程为主，这是前提。</code> 老师是知道考试大纲的人，最专业。</li>
+<li>完成老师布置的作业，再进行巩固。
+<blockquote>
+<p>发现不懂的地方，即时咨询（谁都可以）</p>
+</blockquote>
+</li>
+<li>有条件的话，在家多上机实操。计算机类的东西，最忌讳只看书，最看重理论(30%)+实践(70%)相结合。</li>
+</ol>
+<h2 id="参考资料">参考资料</h2>
+<h3 id="开发工具的使用">开发工具的使用</h3>
+<ul>
+<li>【第一步】老师指定的RUNOOB官网教程
+<blockquote>
+<p>无需下载，<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener noreffer ">点击进入</a></p>
+</blockquote>
+</li>
+<li>【第二步】Dev C++使用不熟练怎么办？
+<blockquote>
+<p>从零学习，非常详细，学习时间：约45分钟<a href="https://www.bilibili.com/video/BV1kC411G7CS/?share_source=copy_web&amp;vd_source=b409ee38e4aea43b041783163db40c35" target="_blank" rel="noopener noreffer ">点击进入</a></p>
+</blockquote>
+</li>
+<li>【第三步】调试是竞赛中快速处理问题的必备技能
+<blockquote>
+<p>学会如何调试，<a href="https://www.bilibili.com/video/BV1Dj411e7SX/?share_source=copy_web&amp;vd_source=b409ee38e4aea43b041783163db40c35" target="_blank" rel="noopener noreffer ">点击进入</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="程序设计基础">程序设计基础</h3>
+<p>哈工大计算机博士开的课，其本人是高校教师，致力于编程教育、科技竞赛、项目合作、算法&amp;人工智能研究。</p>
+<ul>
+<li>【第一步】程序设计基础，从更高的一层详细讲解了程序设计的概念，不仅仅是C++。
+<blockquote>
+<p><a href="https://space.bilibili.com/487758335/channel/seriesdetail?sid=3652685" target="_blank" rel="noopener noreffer ">点击进入</a></p>
+</blockquote>
+</li>
+<li>【第二步】C++程序设计基础，涵盖了RUNOOB官网教程的核心知识点，使用的工具也是Dev C++，强烈推荐！
+<blockquote>
+<p><a href="https://space.bilibili.com/487758335/channel/seriesdetail?sid=885949&amp;ctype=0" target="_blank" rel="noopener noreffer ">点击进入</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="算法与真题">算法与真题</h3>
+<p>当了这一步，已经脱离初级阶段。不用在意使用的是哪种开发工具了，重在对代码层别的理解。</p>
+<ul>
+<li>【第一步】算法基础，详细讲解了数据结构和基础算法。内容比较多，<code>根据老师提到的知识点选择性观看</code>
+<blockquote>
+<p><a href="https://www.bilibili.com/video/BV13v4y1Q7uq/?share_source=copy_web&amp;vd_source=b409ee38e4aea43b041783163db40c35" target="_blank" rel="noopener noreffer ">点击进入</a></p>
+</blockquote>
+</li>
+<li>【第二步】算法实战（每日一题，是竞赛真题）<code>先从你学过的知识点里去找对应题目，不要贪多</code>
+<blockquote>
+<p><a href="https://space.bilibili.com/300119767/channel/seriesdetail?sid=4014057" target="_blank" rel="noopener noreffer ">点击进入</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="其他">其他</h2>
+<ul>
+<li>什么是省赛？
+答：<code>高考作文</code>，限时、有不小的难度。</li>
+<li>省赛和编程一样吗？
+答：不一样。省赛相当于应试教育，编程是兴趣技能。省赛会考一些稀奇古怪的知识点，但在实际项目中往往是用不到的。</li>
+<li>为什么要使用Dev C++ ？
+答：蓝桥杯等省赛强制使用dev，就是因为他没有代码提示。所以，要熟记语法。</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024/05/23</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/tags/dev-c&#43;&#43;/">Dev C&#43;&#43;</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2024-05-22_%E6%96%B0%E5%AA%92%E4%BD%93%E8%BF%90%E8%90%A5%E7%AC%94%E8%AE%B0/" class="prev" rel="prev" title="新媒体运营笔记"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>新媒体运营笔记</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">骆驼兔子</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
