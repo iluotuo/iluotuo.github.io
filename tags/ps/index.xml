@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PS - 标签 - 骆驼兔子</title>
+        <link>https://iluotuo.github.io/tags/ps/</link>
+        <description>PS - 标签 - 骆驼兔子</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 25 May 2024 20:52:28 &#43;0800</lastBuildDate><atom:link href="https://iluotuo.github.io/tags/ps/" rel="self" type="application/rss+xml" /><item>
+    <title>PS Pr 安装教程(mac)</title>
+    <link>https://iluotuo.github.io/posts/2024-05-25_adobe2020/</link>
+    <pubDate>Sat, 25 May 2024 20:52:28 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/posts/2024-05-25_adobe2020/</guid>
+    <description><![CDATA[下载 由于Adobe小版本更新不断，每次小更新都保存的话会太占网盘空间，所以把不同年代的版本都放在合集里，合集里包含了从2019~2024当前]]></description>
+</item>
+</channel>
+</rss>

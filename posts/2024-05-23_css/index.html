@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>CSS 知识点 - 骆驼兔子</title><meta name="Description" content=""><meta property="og:url" content="https://iluotuo.github.io/posts/2024-05-23_css/">
+  <meta property="og:site_name" content="骆驼兔子">
+  <meta property="og:title" content="CSS 知识点">
+  <meta property="og:description" content="BFC BFC Block Formatting Context，块级格式化上下文，它规定了内部的块级元素的布局方式。 默认情况下只有根元素一个块级上下文。 布局规则 内部的块级元素会在垂">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-23T17:09:54+08:00">
+    <meta property="article:modified_time" content="2024-05-23T17:09:54+08:00">
+    <meta property="article:tag" content="CSS">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CSS 知识点">
+  <meta name="twitter:description" content="BFC BFC Block Formatting Context，块级格式化上下文，它规定了内部的块级元素的布局方式。 默认情况下只有根元素一个块级上下文。 布局规则 内部的块级元素会在垂">
+<meta name="application-name" content="骆驼兔子">
+<meta name="apple-mobile-web-app-title" content="骆驼兔子"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://iluotuo.github.io/posts/2024-05-23_css/" /><link rel="prev" href="https://iluotuo.github.io/posts/2024-05-23_runoob/" /><link rel="next" href="https://iluotuo.github.io/posts/2024-05-25_douyin/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "CSS 知识点",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/iluotuo.github.io\/posts\/2024-05-23_css\/"
+        },"genre": "posts","keywords": "CSS","wordcount":  332 ,
+        "url": "https:\/\/iluotuo.github.io\/posts\/2024-05-23_css\/","datePublished": "2024-05-23T17:09:54+08:00","dateModified": "2024-05-23T17:09:54+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "骆驼兔子"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="骆驼兔子"><span class="header-title-pre"><i class='fa-solid fa-hippo'></i></span> 主 页 </a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="无边记"> 所有博文 </a><a class="menu-item" href="/tags/"> 标 签 </a><a class="menu-item" href="/categories/"> 分 类 </a><a class="menu-item" href="/posts/resume" title="生命的痕迹"> 简 历 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="骆驼兔子"><span class="header-title-pre"><i class='fa-solid fa-hippo'></i></span> 主 页 </a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="无边记">所有博文</a><a class="menu-item" href="/tags/" title="">标 签</a><a class="menu-item" href="/categories/" title="">分 类</a><a class="menu-item" href="/posts/resume" title="生命的痕迹">简 历</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CSS 知识点</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>骆驼兔子</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/css/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>CSS</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024/05/23">2024/05/23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 332 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#bfc">BFC</a>
+      <ul>
+        <li><a href="#布局规则">布局规则</a></li>
+        <li><a href="#创建bfc">创建BFC</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="bfc">BFC</h2>
+<p>BFC <code>Block Formatting Context</code>，块级格式化上下文，它规定了<strong>内部</strong>的块级元素的布局方式。</p>
+<p>默认情况下只有根元素一个块级上下文。</p>
+<h3 id="布局规则">布局规则</h3>
+<ul>
+<li>内部的块级元素会在垂直方向，一个接一个地放置；</li>
+<li>块级元素垂直方向的距离由margin决定。属于同一个BFC的两个相邻的块级元素会发生margin合并，不属于同一个BFC的两个相邻的块级元素不会发生margin合并；</li>
+<li>BFC的区域不会与float box重叠；</li>
+<li>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素；外面的元素也不会影响到容器里面的子元素；</li>
+<li>计算BFC的高度时，浮动元素也参与计算；</li>
+</ul>
+<h3 id="创建bfc">创建BFC</h3>
+<ul>
+<li>float 的值不为none；</li>
+<li>overflowr 的值不为visible；</li>
+<li>position 的值为fixed / absolute</li>
+<li>display 的值为flex / inline-block / inline-flex / table-cell / table-caption；</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024/05/23</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/css/">CSS</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2024-05-23_runoob/" class="prev" rel="prev" title="Runoob - C&#43;&#43;编程教程笔记"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Runoob - C++编程教程笔记</a>
+            <a href="/posts/2024-05-25_douyin/" class="next" rel="next" title="抖音运营">抖音运营<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">骆驼兔子</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
