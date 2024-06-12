@@ -3,7 +3,15 @@
         <title>Tags - 标签 - 骆驼兔子</title>
         <link>https://iluotuo.github.io/tags/</link>
         <description>Tags - 标签 - 骆驼兔子</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 03 Jun 2024 06:43:52 &#43;0800</lastBuildDate><atom:link href="https://iluotuo.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Jun 2024 16:30:41 &#43;0800</lastBuildDate><atom:link href="https://iluotuo.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Vue3</title>
+    <link>https://iluotuo.github.io/tags/vue3/</link>
+    <pubDate>Wed, 12 Jun 2024 16:30:41 &#43;0800</pubDate>
+    <author>骆驼兔子</author>
+    <guid>https://iluotuo.github.io/tags/vue3/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>AI大模型</title>
     <link>https://iluotuo.github.io/tags/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
     <pubDate>Mon, 03 Jun 2024 06:43:52 &#43;0800</pubDate>
@@ -73,14 +81,6 @@
     <pubDate>Sun, 19 May 2024 10:47:51 &#43;0800</pubDate>
     <author>骆驼兔子</author>
     <guid>https://iluotuo.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>文章</title>
-    <link>https://iluotuo.github.io/tags/%E6%96%87%E7%AB%A0/</link>
-    <pubDate>Sun, 19 May 2024 10:47:51 &#43;0800</pubDate>
-    <author>骆驼兔子</author>
-    <guid>https://iluotuo.github.io/tags/%E6%96%87%E7%AB%A0/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
